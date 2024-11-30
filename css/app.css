@@ -3,11 +3,17 @@
 
 body {
     background: black;
+    background: -webkit-linear-gradient(75deg, #202, black);
     color: white;
+    background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: white;
+}
+
+* {
+    outline: none;
 }
 
 /* Navigation Menu
@@ -24,9 +30,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #navigation a {
     text-align: center;
-    padding: 10px;
+    padding: 1em 2em;
     color: white;
-    font-size: large;
+    font-size: 1.4em;
     text-decoration: none;
 }
 
@@ -34,70 +40,63 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: underline;
 }
 
-/* Emote Stats
+/* Emote Rows
 ----------------------------------------------------------------------*/
 
-h1, h6 {
-    text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    outline: none;
-}
-
-#emotes {
-    background: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.emote {
+.row {
     height: 48px;
-    width: 60em;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    border: #333 solid 1px;
-    border-top: 0;
 }
 
-.emote:first-of-type {
-    border-top: #333 solid 1px;
+.row:first-of-type div {
+    font-size: 2.5rem;
 }
 
-.emote img {
+.row:nth-of-type(even) {
+    background-color: #141414;
+}
+
+.row img, .row .notImg {
     height: 100%;
     width: 128px;
     object-fit: contain;
 }
 
-.emote .notImg {
-    height: 100%;
-    width: 128px;
-    object-fit: contain;
+.row img {
+    cursor: pointer;
 }
 
-.emote .textValue {
+.row .textValue {
     display: flex;
+    flex: 1;
     height: 100%;
-    width: 368px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: large;
     align-items: center;
 }
 
+/* Channel Emote Stats
+----------------------------------------------------------------------*/
+
+#emoteCount {
+    color: #BBB;
+    margin: 0 0 0 32px;
+}
+
+/* Personal Emote Stats
+----------------------------------------------------------------------*/
+
 #search {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    width: 100%;
+    min-width: 0;
 }
 
 #search input {
-    align-self: center;
-    background: linear-gradient(180deg, #0000 0%, #FFF2 100%);
     border: 0;
     outline: 0;
     border-bottom: 1px #ddd solid;
@@ -105,4 +104,47 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 40px;
     text-align: center;
     color: #fff;
+    margin-left: 10px;
+}
+
+#searchContainer {
+    display: flex;
+}
+
+#searchContainer h1 {
+    display: inline-block;
+    font-size: min(4vw, 50px);
+    align-self: center;
+}
+
+#searchContainer input {
+    font-size: min(4vw, 50px);
+}
+
+/* Misc
+----------------------------------------------------------------------*/
+
+#cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,5fr));
+}
+
+.card {
+    background: #111;
+    border-radius: 16px;
+    color: white;
+    padding: 16px 8px 16px 8px;
+    margin: 16px;
+}
+
+.gradient-text {
+    background: -webkit-gradient(linear,left top,right top,from(mediumorchid),to(orangered));
+    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.center {
+    text-align: center;
 }
