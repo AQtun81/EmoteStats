@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TwitchStats",
   "resources": {
-    "hash": "sha256-Xm5DSHq7VEbJgcq3f7i0jUkwe7j8fPqjQF4g9XSgUvQ=",
+    "hash": "sha256-Ujqx8DyuSP1mfIqHv6+RXhbKJJ6XL2Gs2dHbG0IRknY=",
     "jsModuleNative": {
       "dotnet.native.8.0.11.1owkvcqkjs.js": "sha256-5YHLX+J5wUiwQAGoXGaDwlRIzQZ7S3iEHbV3a4R6vZA="
     },
@@ -59,7 +59,7 @@
       "System.Text.Json.wasm": "sha256-fFJ7K7KKGqZcqvluJAvDMEQi34LAJN3uy+VnkPL+xa4=",
       "System.Text.RegularExpressions.wasm": "sha256-ac3ByMhfenqN+Fdfzfz4l4u8B37iiOLHlWCMd9jRJys=",
       "System.wasm": "sha256-UsIFTsNRr1Sw/A0hEbTyYbQo5eHUNmMuOWT6/xaM3TE=",
-      "TwitchStats.wasm": "sha256-YK+kodT/b4jFPbInYry4R7kJzNILTqepzgbm3IcWFpI="
+      "TwitchStats.wasm": "sha256-PFinJC9vQ7WZO55CgDV+HgolMZ67Vn6LI7LUJzwq49Q="
     }
   },
   "cacheBootResources": true,
